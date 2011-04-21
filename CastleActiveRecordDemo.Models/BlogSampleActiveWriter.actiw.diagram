@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activeRecordMapping dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BlogSampleActiveWriter">
+  <modelMoniker Id="6d5c341e-4123-44bd-8f35-a909f9936c33" />
+  <nestedChildShapes>
+    <classShape Id="ea97831e-1771-4bed-b6ca-6f06bb86786b" absoluteBounds="4.75, 3.375, 1.5, 1.2105004882812502">
+      <modelClassMoniker name="/6d5c341e-4123-44bd-8f35-a909f9936c33/Blog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c2230fc-d7e5-4eb1-bc9f-1284522becc9" absoluteBounds="4.765, 3.785, 1.4700000000000002, 0.70050048828125011" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="99d11dd5-9824-48ce-a481-fdf34b5765ab" absoluteBounds="1.625, 2.25, 1.5, 1.5391951497395833">
+      <modelClassMoniker name="/6d5c341e-4123-44bd-8f35-a909f9936c33/Post" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93b5abcb-916e-40ee-9d53-48eb9c4bd4dd" absoluteBounds="1.6400000000000001, 2.66, 1.4700000000000002, 1.029195149739583" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="31a08ed3-4ccd-4865-8d41-bce179735076" absoluteBounds="4.25, 0.75, 1.5, 1.2105004882812502">
+      <modelClassMoniker name="/6d5c341e-4123-44bd-8f35-a909f9936c33/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ed77415-bc87-4c5a-93af-39369692ce49" absoluteBounds="4.265, 1.1600000000000001, 1.4700000000000002, 0.70050048828125011" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <manyToOneConnector edgePoints="[(3.125 : 3.58209757486979); (4.75 : 3.58209757486979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <manyToOneRelationMoniker Id="8e25ae13-53ea-4930-a74b-0400db71f7ef" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="99d11dd5-9824-48ce-a481-fdf34b5765ab" />
+        <classShapeMoniker Id="ea97831e-1771-4bed-b6ca-6f06bb86786b" />
+      </nodes>
+    </manyToOneConnector>
+    <manyToOneConnector edgePoints="[(5.25 : 3.375); (5.25 : 1.96050048828125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <manyToOneRelationMoniker Id="b797bf04-734d-4bdc-9663-783794ece786" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="ea97831e-1771-4bed-b6ca-6f06bb86786b" />
+        <classShapeMoniker Id="31a08ed3-4ccd-4865-8d41-bce179735076" />
+      </nodes>
+    </manyToOneConnector>
+    <manyToOneConnector edgePoints="[(3.125 : 2.78125); (4.46875 : 2.78125); (4.46875 : 1.96050048828125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <manyToOneRelationMoniker Id="c2346df1-5361-4884-b53b-c2ff8986c35b" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="99d11dd5-9824-48ce-a481-fdf34b5765ab" />
+        <classShapeMoniker Id="31a08ed3-4ccd-4865-8d41-bce179735076" />
+      </nodes>
+    </manyToOneConnector>
+  </nestedChildShapes>
+</activeRecordMapping>

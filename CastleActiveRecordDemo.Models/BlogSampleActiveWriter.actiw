@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model dslVersion="1.0.0.0" Id="6d5c341e-4123-44bd-8f35-a909f9936c33" generateMetaData="InSubClass" initializeIListFields="true" xmlns="http://schemas.microsoft.com/dsltools/ActiveWriter">
+  <additionalImports>AAEAAAD/////AQAAAAAAAAAMAgAAAF1BbHRpbm9yZW4uQWN0aXZlV3JpdGVyLkRzbCwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTkwNTE0MTM5NmRkYjA3OTkEAQAAAKEBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tBbHRpbm9yZW4uQWN0aXZlV3JpdGVyLkltcG9ydCwgQWx0aW5vcmVuLkFjdGl2ZVdyaXRlci5Ec2wsIFZlcnNpb249MS4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj05MDUxNDEzOTZkZGIwNzk5XV0DAAAABl9pdGVtcwVfc2l6ZQhfdmVyc2lvbgQAAB9BbHRpbm9yZW4uQWN0aXZlV3JpdGVyLkltcG9ydFtdAgAAAAgICQMAAAAAAAAAAAAAAAcDAAAAAAEAAAAAAAAABB1BbHRpbm9yZW4uQWN0aXZlV3JpdGVyLkltcG9ydAIAAAAL</additionalImports>
+  <classes>
+    <modelClass name="Blog" schema="dbo" table="Blog">
+      <targets>
+        <manyToOneRelation Id="b797bf04-734d-4bdc-9663-783794ece786" targetCascade="All" targetColumnKey="CreatedBy" targetLazy="true" targetTable="Blog" targetPropertyName="Blogs" sourceCascade="All" sourceColumn="CreatedBy" sourcePropertyName="CreatedBy">
+          <modelClassMoniker name="/6d5c341e-4123-44bd-8f35-a909f9936c33/User" />
+        </manyToOneRelation>
+      </targets>
+      <properties>
+        <modelProperty Id="be0962cd-1399-4259-b43a-25ef26f5350c" name="Id" column="Id" columnType="Int32" length="0" notNull="true" keyType="PrimaryKey" />
+        <modelProperty Id="390f6461-c209-4ab4-8e7b-d7891e20bfd9" name="Name" column="Name" length="0" notNull="true" />
+        <modelProperty Id="f34de486-e540-4a0d-93ff-2d1e3a1204a7" name="Author" column="Author" length="0" notNull="true" />
+      </properties>
+    </modelClass>
+    <modelClass name="Post" schema="dbo" table="Post">
+      <targets>
+        <manyToOneRelation Id="8e25ae13-53ea-4930-a74b-0400db71f7ef" targetCascade="All" targetColumnKey="BlogId" targetLazy="true" targetTable="Post" targetPropertyName="Posts" sourceCascade="All" sourceColumn="BlogId">
+          <modelClassMoniker name="/6d5c341e-4123-44bd-8f35-a909f9936c33/Blog" />
+        </manyToOneRelation>
+        <manyToOneRelation Id="c2346df1-5361-4884-b53b-c2ff8986c35b" targetCascade="All" targetColumnKey="CreatedBy" targetLazy="true" targetTable="Post" targetPropertyName="Posts" sourceCascade="All" sourceColumn="CreatedBy" sourcePropertyName="CreatedBy">
+          <modelClassMoniker name="/6d5c341e-4123-44bd-8f35-a909f9936c33/User" />
+        </manyToOneRelation>
+      </targets>
+      <properties>
+        <modelProperty Id="8c55cc51-e496-435f-a267-d14076c0995b" name="Id" column="Id" columnType="Int32" length="0" notNull="true" keyType="PrimaryKey" />
+        <modelProperty Id="7134a2d7-8fe5-4c66-9551-96f74055ab84" name="Title" column="Title" length="0" notNull="true" />
+        <modelProperty Id="b114432f-b222-4d38-9210-60da94fbb59e" name="Contents" column="Contents" length="0" notNull="true" />
+        <modelProperty Id="cd975353-1a48-4a07-ab5e-49c5c5440da2" name="Category" column="Category" length="0" />
+        <modelProperty Id="0afe55b8-8a11-4334-90ee-3e9d781ffa03" name="CreatedDate" column="CreatedDate" columnType="Timestamp" length="0" notNull="true" />
+      </properties>
+    </modelClass>
+    <modelClass name="User" lazy="true" schema="dbo" table="User">
+      <properties>
+        <modelProperty Id="110cbc9a-5666-4029-883c-30a1032f495e" name="Id" column="Id" columnType="Int32" length="0" notNull="true" keyType="PrimaryKey" />
+        <modelProperty Id="46346539-4614-43b2-a502-23683f0bf831" name="Username" column="Username" length="0" notNull="true" />
+        <modelProperty Id="9742997c-c242-4482-8e2f-4c22b47aa998" name="Password" column="Password" length="0" notNull="true" />
+      </properties>
+    </modelClass>
+  </classes>
+</model>
